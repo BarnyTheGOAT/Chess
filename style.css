@@ -1,12 +1,12 @@
-.spot_white{
+.spot_white{ /* color of white spots set to tan */
     background-color: tan;
 }
 
-.spot_black{
+.spot_black{ /* color of black spots set to green */
     background-color: green;
 }
 
-.spot{
+.spot{ /* formating for each spot */
     display: inline-block;
     width: 100px;
     height: 90px;
@@ -15,14 +15,15 @@
     padding-top: 20px;
 }
 
-.side_white{
+.side_white{ /* making white pieces appear white */
     color: white;
 }
 
-.side_black{
+.side_black{ /* making black pieces appear black */
     color: black;
 }
 
-.no_side{
-    color: transparent;
+.no_side{ 
+    font-size: 80px;
+    /* not needed currently, but could be used later. font-size: 80px is a decoy */
 }
