@@ -1,0 +1,28 @@
+.spot_white{
+    background-color: tan;
+}
+
+.spot_black{
+    background-color: green;
+}
+
+.spot{
+    display: inline-block;
+    width: 100px;
+    height: 90px;
+    font-size: 80px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.side_white{
+    color: white;
+}
+
+.side_black{
+    color: black;
+}
+
+.no_side{
+    color: transparent;
+}
