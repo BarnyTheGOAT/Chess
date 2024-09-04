@@ -20,6 +20,8 @@ var side = [
     ['w', 'w', 'w', 'w', 'w', 'w', 'w', 'w']
 ]; // the gameboard data of what pieces belong to which side
 
+var turn = "w"; // whose turn it is
+
 
 //function to put all the html code together and add it to the html file.
 function render_board() {
@@ -60,7 +62,6 @@ function render_board() {
     document.getElementById('divBoard').innerHTML = content;
     setTimeout(() => {
         render_board();
-        console.log(click1, click1id);
     }, 500);// calls the function every 500 milliseconds
 }
 
@@ -76,20 +77,47 @@ var click1id = "";
 
 // function for moving the pieces when a piece is clicked
 function piece_clicked(id){
+    console.log(click1, click1id, id);
     if (click1 == 0){
         click1 = 1;
         click1id = id;
     } else {
-        if (gameboard[click1id[0]][click1id[1]] == "♟"){// moving a white pawn // can always move 2 steps // can't cut other pieces
-            if (side[click1id[0]][click1id[1]] == "w"){
-                if (id[1] == click1id[1] && 0 < (click1id[0] - id[0]) < 2){ 
-                    gameboard[id[0]][id[1]] = "♟";
-                    side[id[0]][id[1]] = "w";
-                    gameboard[click1id[0]][click1id[1]] = "";
-                    side[click1id[0]][click1id[1]] = "";
+        if (turn == "w"){
+            if (gameboard[click1id[0]][click1id[1]] == "♟"){// moving a white pawn // can't cut other pieces
+                if (side[click1id[0]][click1id[1]] == "w"){
+                    if 
+                    // yes the condintion is that complex
+                    (
+                        id[1] == click1id[1] 
+                        && //and
+                        (
+                            (
+                                0 < (click1id[0] - id[0]) < 3 
+                                &&//and
+                                click1id[1] == 6
+                                &&//and
+                                gameboard[5][id[1]] == ""
+                            )
+                            ||//or
+                            (
+                                click1id[0] - id[0] == 1
+                            )
+                        )
+                    )
+                    
+                    { 
+                        if (gameboard[id[0]][id[1]] == ""){
+                            gameboard[id[0]][id[1]] = "♟";
+                            side[id[0]][id[1]] = "w";
+                            gameboard[click1id[0]][click1id[1]] = "";
+                            side[click1id[0]][click1id[1]] = "";
+                        }
+                    }
                 }
             }
+            click1 = 0;
+        } else if (turn == "b"){
+            //nothing yet...
         }
-        click1 = 0;
     }
 }
