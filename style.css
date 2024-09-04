@@ -27,3 +27,17 @@
     font-size: 80px;
     /* not needed currently, but could be used later. font-size: 80px; is a decoy */
 }
+
+#heading{
+    background: linear-gradient(0.15turn, #9198e5, #e66465);
+    border-radius: 5px;
+    width: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+body{
+    background: #515151;
+}
