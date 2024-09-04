@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+
 .spot_white{ /* color of white spots set to tan */
     background-color: tan;
 }
@@ -32,10 +34,14 @@
     background: linear-gradient(0.15turn, #9198e5, #e66465);
     border-radius: 5px;
     width: fit-content;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 160px;
+    padding-right: 160px;
     padding-top: 5px;
     padding-bottom: 5px;
+    font-family: "SUSE", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;;
 }
 
 body{
