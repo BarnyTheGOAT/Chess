@@ -84,29 +84,9 @@ function piece_clicked(id){
     } else {
         if (turn == "w"){
             if (gameboard[click1id[0]][click1id[1]] == "♟"){// moving a white pawn // can't cut other pieces
-                if (side[click1id[0]][click1id[1]] == "w"){
-                    if 
-                    // yes the condintion is that complex
-                    (
-                        id[1] == click1id[1] 
-                        && //and
-                        (
-                            (
-                                0 < (click1id[0] - id[0]) < 3 
-                                &&//and
-                                click1id[1] == 6
-                                &&//and
-                                gameboard[5][id[1]] == ""
-                            )
-                            ||//or
-                            (
-                                click1id[0] - id[0] == 1
-                            )
-                        )
-                    )
-                    
-                    { 
-                        if (gameboard[id[0]][id[1]] == ""){
+                if (side[click1id[0]][click1id[1]] == "w"){ // if the piece clicked is white
+                    if (id[1] == click1id[1] && ((0 < (click1id[0] - id[0]) < 3 &&click1id[1] == 6&&gameboard[5][id[1]] == "")||(click1id[0] - id[0] == 1))){ 
+                        if (gameboard[id[0]][id[1]] == ""){ // if its empty
                             gameboard[id[0]][id[1]] = "♟";
                             side[id[0]][id[1]] = "w";
                             gameboard[click1id[0]][click1id[1]] = "";
